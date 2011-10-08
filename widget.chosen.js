@@ -2,14 +2,14 @@
  * Widget for a better selectbox experience by using the jQuery Plugin "chosen":
  * see: http://harvesthq.github.com/chosen/
  *
- * Attention: the used i18n filter is a custom filter by Marco Michely
- * see: https://github.com/jehu
+ * Attention: the used i18n filter is a custom filter by Jehu (Marco Michely) 
+ * see: https://github.com/Jehu/Angular-Addons/blob/master/filter.i18n.js
  *
  * Sample usage:
  * <select
-     name="selectedContactName"
-     data-placeholder="Choose an item..."
-     my:chosen="availableContacts"></select>
+ *    name="selectedContactName"
+ *    data-placeholder="Choose an item..."
+ *    my:chosen="availableContacts"></select>
  *
  */
 angular.widget('@my:chosen', function(expression,element) {
