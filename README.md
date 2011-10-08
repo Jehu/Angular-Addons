@@ -14,3 +14,10 @@ Based on a simple approach to translate strings in an javascript application, th
 Dependencies: 
 
 * [sprintf](http://www.diveintojavascript.com/projects/javascript-sprintf).
+
+## directive.datepicker.js
+A directive for simple usage of jQueryUI's datepicker. Creates a new date object for use in controller too.
+
+Dependencies:
+
+* filter.i18n.js
