@@ -11,12 +11,15 @@ angular.directive('my:datepicker', function(expression,element) {
     return function(element) {
         var currentScope = this;
         currentScope.$watch(expression, function(value) {
+            var elemName = element.attr('name');
+            var dateObj = jQuery.datepicker.parseDate( angular.filter.i18n('mm/dd/yy'), element.val() );
+            // create a new property with date object, can be used in controller, 
+            // e.g.jQuery.datepicker.formatDate('yy-mm-dd', dateObj));
+            currentScope[elemName + 'Obj'] = dateObj;
             element.datepicker().change(function() {
-                var elemName = element.attr('name');
-                var dateObj = jQuery.datepicker.parseDate( angular.filter.i18n('mm/dd/yy'), currentScope[elemName] );
+                // refresh properties after change
+                dateObj = jQuery.datepicker.parseDate( angular.filter.i18n('mm/dd/yy'), element.val() );
                 currentScope[elemName] = element.val();
-                // create a new property with date object, can be used in controller, 
-                // e.g.jQuery.datepicker.formatDate('yy-mm-dd', dateObj));
                 currentScope[elemName + 'Obj'] = dateObj;
             });
         });
