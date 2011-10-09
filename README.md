@@ -21,4 +21,11 @@ A directive for simple usage of jQueryUI's datepicker. Creates a new date object
 Dependencies:
 
 * filter.i18n.js
-* jQueryUI datepicker
+* jQueryUI Datepicker
+
+## directive.autocomplete.js
+A simple directive for jQueryUI Autocomplete. Default functionality only, not yet configurable (will be done on demand).
+
+Dependencies:
+
+* jQueryUI Autocomplete
