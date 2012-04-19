@@ -38,9 +38,9 @@ angular.filter('i18n', function(string) {
         if (log_untranslated == true) {
             // here we could track unreanslated strings by sending them to the server...
         }
-        return sprintf(string, placeholders);
+        return vsprintf(string, placeholders);
     }
-    return sprintf(translated, placeholders);
+    return vsprintf(translated, placeholders);
 
 });
 
